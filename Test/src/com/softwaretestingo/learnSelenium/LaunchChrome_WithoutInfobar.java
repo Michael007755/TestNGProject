@@ -1,0 +1,18 @@
+package com.softwaretestingo.learnSelenium;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+public class LaunchChrome_WithoutInfobar 
+{
+   public static void main(String[] args) throws InterruptedException 
+   {
+      System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+      
+      //For Disable Chrome Info Bar
+      ChromeOptions option=new ChromeOptions();
+      option.addArguments("disable-infobars");
+      WebDriver driver=new ChromeDriver(option);
+      driver.get("https://www.google.com");
+      driver.close();
+   }
+}
